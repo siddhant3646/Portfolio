@@ -135,7 +135,7 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                href="/resume.pdf"
+                href="/Portfolio/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-8 py-4 rounded-full glass text-white font-semibold flex items-center gap-3 border border-white/10 cursor-hover"
@@ -199,7 +199,7 @@ const Hero = () => {
               {/* Main Image Container */}
               <div className="absolute inset-8 rounded-full overflow-hidden glass-strong glow-purple">
                 <img
-                  src="/profile.jpg"
+                  src="/Portfolio/profile.jpg"
                   alt="Siddhant Singh"
                   className="w-full h-full object-cover"
                   onError={(e) => {
