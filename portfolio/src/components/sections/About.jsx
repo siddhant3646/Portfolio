@@ -188,7 +188,7 @@ const About = () => {
                   glowColor={`${item.color}30`}
                 >
                   <div className="glass rounded-2xl p-6 h-full border border-white/5 hover:border-opacity-30 transition-colors cursor-hover" style={{ '--tw-border-opacity': 0.1, borderColor: item.color }}>
-                    <div 
+                    <div
                       className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
                       style={{ backgroundColor: `${item.color}20` }}
                     >
@@ -200,27 +200,24 @@ const About = () => {
                 </TiltCard>
               </motion.div>
             ))}
+            {/* Education Badge */}
+            <motion.div
+              variants={itemVariants}
+              className="sm:col-span-2"
+            >
+              <div className="glass rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center gap-6">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#ff006e]/20 to-[#8338ec]/20 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-gradient-sunset">VIT</span>
+                </div>
+                <div className="text-center sm:text-left">
+                  <h4 className="text-lg font-semibold text-white">Vellore Institute of Technology</h4>
+                  <p className="text-slate-400">B.Tech in Computer Science and Engineering</p>
+                  <p className="text-sm text-slate-500">2018 - 2022 • Bhopal, India</p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
-
-        {/* Education Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 flex justify-center"
-        >
-          <div className="glass rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center gap-6">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#ff006e]/20 to-[#8338ec]/20 flex items-center justify-center">
-              <span className="text-2xl font-bold text-gradient-sunset">VIT</span>
-            </div>
-            <div className="text-center sm:text-left">
-              <h4 className="text-lg font-semibold text-white">Vellore Institute of Technology</h4>
-              <p className="text-slate-400">B.Tech in Computer Science and Engineering</p>
-              <p className="text-sm text-slate-500">2018 - 2022 • Bhopal, India</p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
