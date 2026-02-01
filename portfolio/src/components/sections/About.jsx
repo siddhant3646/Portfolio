@@ -37,9 +37,9 @@ const About = () => {
 
   const stats = [
     { value: 3.5, suffix: '+', label: 'Years Experience', color: '#ff006e' },
-    { value: 80, suffix: '+', label: 'User Stories Resolved', color: '#8338ec' },
-    { value: 40, suffix: '%', label: 'Performance Gain', color: '#00f5ff' },
+    { value: 135, suffix: '+', label: 'User Stories Resolved', color: '#8338ec' },
     { value: 25, suffix: '+', label: 'APIs Built', color: '#ffbe0b' },
+    { value: 40, suffix: '%', label: 'Performance Gain', color: '#00f5ff' },
   ];
 
   const containerVariants = {
