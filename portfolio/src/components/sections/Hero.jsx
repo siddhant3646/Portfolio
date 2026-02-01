@@ -155,7 +155,7 @@ const Hero = () => {
             <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-8">
               {[
                 { value: '3.5+', label: 'Years Experience' },
-                { value: '80+', label: 'User Stories Resolved' },
+                { value: '135+', label: 'User Stories Resolved' },
                 { value: '25+', label: 'APIs Built' },
               ].map((stat, index) => (
                 <motion.div

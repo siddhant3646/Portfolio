@@ -19,7 +19,7 @@ const Achievements = () => {
     },
     {
       title: '1st Place - Code Warrior',
-      organization: 'VIT Bhopal',
+      organization: 'Fiserv',
       year: '2021',
       description: 'Won first place in university-level competitive programming competition.',
       icon: Star,
@@ -36,7 +36,7 @@ const Achievements = () => {
       highlight: 'Impact',
     },
     {
-      title: '80+ User Stories Delivered',
+      title: '135+ User Stories Delivered',
       organization: 'Fiserv',
       year: '2022-2024',
       description: 'Consistently delivered high-quality features and resolved complex production issues.',

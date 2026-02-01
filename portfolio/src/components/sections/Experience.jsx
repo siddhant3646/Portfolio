@@ -16,7 +16,7 @@ const Experience = () => {
       color: '#ff006e',
       achievements: [
         'Migrated production services from Java 8 to Java 21, improving response time by 15% using virtual threads',
-        'Resolved 80+ user stories and 35 complex defects, improving service reliability by 40%',
+        'Resolved 135+ user stories and 35 complex defects, improving service reliability by 40%',
         'Designed data streaming workflows with Apache Kafka/Flink, increasing reporting reliability by 40%',
         'Engineered scalable Spring Boot microservices, reducing dispute processing time to under 2 seconds',
         'Revamped frontend from legacy HTML/JS to React.js/TypeScript, achieving 40% performance gain',
