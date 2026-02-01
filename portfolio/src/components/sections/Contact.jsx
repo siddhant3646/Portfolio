@@ -253,7 +253,7 @@ const Contact = () => {
                           fontSize: focusedField === 'name' || formData.name ? 12 : 16,
                           color: focusedField === 'name' ? '#ff006e' : '#cbd5e1',
                         }}
-                        style={{ backgroundColor: '#12121a', padding: '0 4px' }}
+                        style={{ padding: '0 4px' }}
                       >
                         Your Name
                       </motion.label>
@@ -278,7 +278,7 @@ const Contact = () => {
                           fontSize: focusedField === 'email' || formData.email ? 12 : 16,
                           color: focusedField === 'email' ? '#ff006e' : '#cbd5e1',
                         }}
-                        style={{ backgroundColor: '#12121a', padding: '0 4px' }}
+                        style={{ padding: '0 4px' }}
                       >
                         Email Address
                       </motion.label>
@@ -303,7 +303,7 @@ const Contact = () => {
                           fontSize: focusedField === 'message' || formData.message ? 12 : 16,
                           color: focusedField === 'message' ? '#ff006e' : '#cbd5e1',
                         }}
-                        style={{ backgroundColor: '#12121a', padding: '0 4px' }}
+                        style={{ padding: '0 4px' }}
                       >
                         Your Message
                       </motion.label>
