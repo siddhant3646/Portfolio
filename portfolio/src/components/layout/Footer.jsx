@@ -116,7 +116,7 @@ const Footer = () => {
                   +91-7905828880
                 </a>
               </li>
-              <li>Noida, India</li>
+              <li>Bangalore, India</li>
             </ul>
           </motion.div>
         </div>

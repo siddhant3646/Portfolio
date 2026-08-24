@@ -8,21 +8,34 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: 'Everbridge',
+      role: 'Software Developer',
+      location: 'Bangalore, India',
+      duration: '2024 - Present',
+      type: 'Full-time',
+      color: '#00f5ff',
+      achievements: [
+        'Developing critical event management platforms and high-availability notification architectures',
+        'Engineering low-latency distributed microservices to support mission-critical communication workflows',
+        'Optimizing system resiliency, throughput, and observability across cloud deployments',
+        'Collaborating on architectural enhancements for enterprise alerting systems',
+      ],
+      tech: ['Java 21', 'Spring Boot', 'Kafka', 'AWS', 'Docker', 'Kubernetes', 'Microservices'],
+    },
+    {
       company: 'Fiserv',
       role: 'Software Engineer - 2',
       location: 'Noida, India',
-      duration: 'Jan 2022 - Present',
+      duration: 'Jan 2022 - 2024',
       type: 'Full-time',
       color: '#ff006e',
       achievements: [
         'Migrated production services from Java 8 to Java 21, improving response time by 15% using virtual threads',
-        'Resolved 135+ user stories and 35 complex defects, improving service reliability by 40%',
+        'Resolved 190+ user stories and 35 complex defects, improving service reliability by 40%',
         'Designed data streaming workflows with Apache Kafka/Flink, increasing reporting reliability by 40%',
         'Engineered scalable Spring Boot microservices, reducing dispute processing time to under 2 seconds',
         'Revamped frontend from legacy HTML/JS to React.js/TypeScript, achieving 40% performance gain',
         'Integrated Fortify scans into GitLab CI/CD, reducing security risks by 75%',
-        'Developed internal tools for monitoring microservices health and performance',
-        'Contributed to API documentation and testing frameworks',
       ],
       tech: ['Java 21', 'Spring Boot', 'React', 'Kafka', 'AWS', 'Docker', 'JUnit', 'Git'],
     },

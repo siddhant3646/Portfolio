@@ -36,9 +36,9 @@ const About = () => {
   ];
 
   const stats = [
-    { value: 3.5, suffix: '+', label: 'Years Experience', color: '#ff006e' },
-    { value: 135, suffix: '+', label: 'User Stories Resolved', color: '#8338ec' },
-    { value: 25, suffix: '+', label: 'APIs Built', color: '#ffbe0b' },
+    { value: 4.2, suffix: '+', label: 'Years Experience', color: '#ff006e' },
+    { value: 190, suffix: '+', label: 'User Stories Resolved', color: '#8338ec' },
+    { value: 45, suffix: '+', label: 'APIs Built', color: '#ffbe0b' },
     { value: 40, suffix: '%', label: 'Performance Gain', color: '#00f5ff' },
   ];
 
@@ -135,17 +135,14 @@ const About = () => {
                 projects laid the foundation for my career.
               </p>
               <p>
-                Currently, I'm a{' '}
-                <span className="text-[#ff006e]">Software Engineer 2 at Fiserv</span>, where I've 
-                had the opportunity to work on mission-critical financial systems. From migrating 
-                legacy Java applications to modern architectures to designing real-time data pipelines, 
-                every challenge has been a learning opportunity.
+                Currently, I&apos;m a{' '}
+                <span className="text-[#ff006e]">Software Developer at Everbridge</span> (and previously Software Engineer 2 at Fiserv), where I work on mission-critical distributed systems and enterprise event architectures in Bangalore. From optimizing real-time notification workflows to designing high-throughput data pipelines, every challenge is an opportunity to innovate.
               </p>
               <p>
                 What drives me is the{' '}
                 <span className="text-[#ffbe0b]">endless possibility of technology</span>. Whether 
-                it's optimizing a microservice for better performance or integrating AI models 
-                into production applications, I'm always excited to push boundaries.
+                it&apos;s optimizing a microservice for better performance or integrating AI models 
+                into production applications, I&apos;m always excited to push boundaries.
               </p>
             </div>
 

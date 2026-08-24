@@ -80,8 +80,8 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Noida, India',
-      href: 'https://maps.google.com/?q=Noida,India',
+      value: 'Bangalore, India',
+      href: 'https://maps.google.com/?q=Bangalore,India',
       color: '#00f5ff',
     },
   ];

@@ -4,7 +4,7 @@ import { TypewriterText, TextReveal } from '../ui/AnimatedText';
 import { MagneticButton } from '../ui/TiltCard';
 
 const Hero = () => {
-  const roles = ['Software Engineer', 'Full Stack Developer', 'AI/ML Enthusiast', 'Problem Solver'];
+  const roles = ['Software Developer', 'Full Stack Engineer', 'AI/ML Specialist', 'Systems Builder'];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Gradient Orbs */}
         <motion.div
           animate={{
@@ -81,7 +81,7 @@ const Hero = () => {
                   transition={{ duration: 2, repeat: Infinity }}
                   className="w-2 h-2 rounded-full bg-green-400"
                 />
-                <span className="text-sm font-medium text-slate-300">Available for opportunities</span>
+                <span className="text-sm font-medium text-slate-300">Software Developer @ Everbridge</span>
                 <Sparkles size={16} className="text-[#ffbe0b]" />
               </motion.div>
             </motion.div>
@@ -89,7 +89,7 @@ const Hero = () => {
             {/* Name */}
             <motion.div variants={itemVariants}>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold font-display mb-4">
-                <span className="text-white">Hi, I'm</span>
+                <span className="text-white">Hi, I&apos;m</span>
                 <br />
                 <span className="text-gradient-sunset">Siddhant</span>
                 <span className="text-gradient-ocean"> Singh</span>
@@ -99,7 +99,7 @@ const Hero = () => {
             {/* Typewriter Role */}
             <motion.div variants={itemVariants} className="mb-6">
               <h2 className="text-xl sm:text-2xl lg:text-3xl text-slate-300">
-                <span className="text-slate-500">I'm a </span>
+                <span className="text-slate-500">I&apos;m a </span>
                 <span className="font-semibold text-[#ff006e]">
                   <TypewriterText words={roles} typingSpeed={80} deletingSpeed={40} pauseTime={2000} />
                 </span>
@@ -111,7 +111,7 @@ const Hero = () => {
               variants={itemVariants}
               className="text-slate-400 text-lg max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              Software Engineer 2 at <span className="text-[#00f5ff]">Fiserv</span>, specializing in building
+              Software Developer at <span className="text-[#00f5ff]">Everbridge</span> (formerly Fiserv), specializing in building
               scalable microservices, optimizing high-throughput data pipelines, and exploring the 
               frontiers of <span className="text-[#ffbe0b]">AI/ML</span>.
             </motion.p>
@@ -120,7 +120,7 @@ const Hero = () => {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
               <motion.a
                 href="#experience"
-                className="group px-8 py-4 rounded-full bg-gradient-to-r from-[#ff006e] to-[#8338ec] text-white font-semibold flex items-center gap-3 cursor-hover"
+                className="group px-8 py-4 rounded-full bg-gradient-to-r from-[#ff006e] to-[#8338ec] text-white font-semibold flex items-center gap-3 cursor-hover shadow-lg shadow-[#ff006e]/20"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 data-cursor-text="View"
@@ -154,10 +154,10 @@ const Hero = () => {
             {/* Stats */}
             <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-8">
               {[
-                { value: '3.5+', label: 'Years Experience' },
-                { value: '135+', label: 'User Stories Resolved' },
-                { value: '25+', label: 'APIs Built' },
-              ].map((stat, index) => (
+                { value: '4.2+', label: 'Years Experience' },
+                { value: '190+', label: 'User Stories Resolved' },
+                { value: '45+', label: 'APIs Built' },
+              ].map((stat) => (
                 <motion.div
                   key={stat.label}
                   className="text-center"
@@ -217,7 +217,7 @@ const Hero = () => {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <span className="text-sm font-semibold text-[#ff006e]">SE-2</span>
+                <span className="text-sm font-semibold text-[#ff006e]">Software Dev</span>
               </motion.div>
 
               <motion.div
@@ -225,7 +225,7 @@ const Hero = () => {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >
-                <span className="text-sm font-semibold text-[#00f5ff]">@Fiserv</span>
+                <span className="text-sm font-semibold text-[#00f5ff]">@Everbridge</span>
               </motion.div>
             </motion.div>
           </motion.div>

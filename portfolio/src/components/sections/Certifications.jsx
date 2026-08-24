@@ -36,7 +36,7 @@ const Achievements = () => {
       highlight: 'Impact',
     },
     {
-      title: '135+ User Stories Delivered',
+      title: '190+ User Stories Delivered',
       organization: 'Fiserv',
       year: '2022-2024',
       description: 'Consistently delivered high-quality features and resolved complex production issues.',

@@ -6,11 +6,11 @@ const CustomCursor = () => {
   const [isClicking, setIsClicking] = useState(false);
   const [cursorText, setCursorText] = useState('');
 
-  const cursorX = useSpring(0, { stiffness: 500, damping: 28 });
-  const cursorY = useSpring(0, { stiffness: 500, damping: 28 });
+  const cursorX = useSpring(0, { stiffness: 800, damping: 35 });
+  const cursorY = useSpring(0, { stiffness: 800, damping: 35 });
   
-  const followerX = useSpring(0, { stiffness: 150, damping: 20 });
-  const followerY = useSpring(0, { stiffness: 150, damping: 20 });
+  const followerX = useSpring(0, { stiffness: 280, damping: 24 });
+  const followerY = useSpring(0, { stiffness: 280, damping: 24 });
 
   useEffect(() => {
     // Check if touch device
