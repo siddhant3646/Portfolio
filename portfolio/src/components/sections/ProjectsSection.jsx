@@ -117,28 +117,16 @@ const ProjectsSection = () => {
                 </div>
               </div>
 
-              {/* Tech Tags & GitHub CTA */}
-              <div>
-                <div className="flex flex-wrap gap-1.5 pt-4 border-t-2 border-dashed border-[#2d2d2d]/30 mb-4">
-                  {p.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="bg-white border border-[#2d2d2d] wobbly px-2.5 py-0.5 font-hand text-xs text-[#2d2d2d]"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-2.5 bg-white border-2 border-[#2d2d2d] wobbly font-heading font-bold text-sm text-[#2d2d2d] sketch-shadow-sm hover:bg-[#ff4d4d] hover:text-white transition-all flex items-center justify-center gap-1.5"
-                >
-                  <span>View Project Source</span>
-                  <ArrowUpRight size={15} />
-                </a>
+              {/* Tech Tags */}
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t-2 border-dashed border-[#2d2d2d]/30">
+                {p.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="bg-white border border-[#2d2d2d] wobbly px-2.5 py-0.5 font-hand text-xs text-[#2d2d2d]"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
             </motion.div>
           ))}
