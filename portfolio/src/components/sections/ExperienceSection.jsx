@@ -31,8 +31,8 @@ const ExperienceSection = () => {
       bg: 'bg-[#fff9c4]',
       rot: 'rotate-1',
       bullets: [
-        'Architected and built an end-to-end Retrieval-Augmented Generation (RAG) system ingesting 5+ document types (PDF, DOCX, Excel, Visio/VSDX, Java) into a unified vector knowledge base using ChromaDB, LangChain, and LlamaIndex.',
-        'Resolved 135+ user stories and 35 complex technical defects, improving service reliability by 40% and reducing user-reported issues by 60%.',
+        'Architected and built an end-to-end Retrieval-Augmented Generation (RAG) system ingesting 5M+ documents across 5+ document types (PDF, DOCX, Excel, Visio/VSDX, Java) into a unified vector knowledge base using ChromaDB, LangChain, and LlamaIndex.',
+        'Resolved 190+ user stories and 35 complex technical defects, resulting in enhanced application functionality, increased security, and improving service reliability by 40% and reducing user-reported issues by 60%.',
         'Designed scalable data streaming workflows integrating Apache Kafka with Apache Flink and Spark, improving settlement reporting reliability by 40% and eliminating data inconsistencies across distributed ledgers.',
         'Migrated production services from Java 8 to Java 21, leveraging virtual threads and Spring reactive stacks to improve application response time by 15%.',
         'Engineered highly scalable Spring Boot microservices, accelerating transaction dispute processing to under 2 seconds and elevating system efficiency scores by 35%.',

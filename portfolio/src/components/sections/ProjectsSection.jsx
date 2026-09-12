@@ -32,8 +32,8 @@ const ProjectsSection = () => {
     {
       title: 'Multimodal Vector RAG System',
       tag: 'GENAI & KNOWLEDGE RETRIEVAL',
-      desc: 'End-to-end Retrieval-Augmented Generation system ingesting 5+ document formats (PDF, DOCX, Excel, Visio/VSDX, Java) into a unified ChromaDB vector store with LangChain and LlamaIndex.',
-      specs: ['5+ Document Formats', 'ChromaDB Vector Store', 'LangChain & LlamaIndex'],
+      desc: 'End-to-end Retrieval-Augmented Generation system ingesting 5M+ documents across 5+ formats (PDF, DOCX, Excel, Visio/VSDX, Java) into a unified ChromaDB vector store with LangChain and LlamaIndex.',
+      specs: ['5M+ Documents Ingested', 'ChromaDB Vector Store', 'LangChain & LlamaIndex'],
       tech: ['LangChain', 'LlamaIndex', 'ChromaDB', 'Python', 'Local LLMs'],
       github: 'https://github.com/siddhant3646',
       bg: 'bg-white',

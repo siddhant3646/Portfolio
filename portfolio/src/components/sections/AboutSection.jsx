@@ -24,10 +24,10 @@ const AboutSection = () => {
       rot: 'rotate-1',
     },
     {
-      title: 'Applied AI & Computer Vision',
-      desc: 'Optimizing and deploying YOLOv10, TensorFlow Lite, and PyTorch for edge mobile detection.',
+      title: 'GenAI, RAG & Edge Vision',
+      desc: 'Architecting 5M+ vector RAG systems with LangChain/ChromaDB and deploying edge YOLOv10 models.',
       icon: Cpu,
-      tag: 'YOLOv10 • TF Lite • PyTorch',
+      tag: 'RAG • ChromaDB • YOLOv10',
       bg: 'bg-white',
       rot: 'rotate-2',
     },

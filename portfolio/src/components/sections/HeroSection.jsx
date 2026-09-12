@@ -55,7 +55,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="font-hand text-lg sm:text-xl md:text-2xl text-[#2d2d2d]/85 leading-relaxed mb-8 max-w-xl"
             >
-              Software Developer at <span className="font-bold text-[#2d5da1] underline decoration-wavy decoration-[#ff4d4d]">Everbridge</span> (previously Fiserv) in Bangalore. 4.2+ years crafting Java 21 microservices, Kafka pipelines, and edge computer vision.
+              Software Engineer at <span className="font-bold text-[#2d5da1] underline decoration-wavy decoration-[#ff4d4d]">Everbridge</span> (previously Fiserv) in Bangalore. 4.2+ years crafting distributed microservices, 10M+ transaction pipelines, and 5M+ document RAG architectures.
             </motion.p>
 
             {/* Action Buttons with Hand-drawn Press Physics */}

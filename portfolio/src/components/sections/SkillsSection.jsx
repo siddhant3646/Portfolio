@@ -61,7 +61,7 @@ const SkillsSection = () => {
         'Local LLMs (Gemma 3, Qwen, DeepSeek)',
         'Ollama Edge Runtime',
         'AI-SDLC Workflow Automation',
-        'Multimodal Doc Parsing (PDF, VSDX, Java)',
+        '5M+ Multimodal Document Ingestion (PDF, VSDX, Java)',
       ],
     },
     {
