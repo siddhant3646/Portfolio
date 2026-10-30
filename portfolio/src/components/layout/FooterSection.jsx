@@ -15,12 +15,12 @@ const FooterSection = () => {
   ];
 
   return (
-    <footer className="py-12 px-4 sm:px-8 md:px-12 paper-texture border-t-2 border-dashed border-[#2d2d2d]/30 text-[#2d2d2d] relative overflow-hidden">
+    <footer className="py-12 px-4 sm:px-8 md:px-12 paper-texture border-t-2 border-dashed border-outline/40 text-ink relative overflow-hidden">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 font-hand text-lg">
         {/* Brand Copyright */}
         <div className="flex items-center gap-2">
           <span>© {currentYear} Handcrafted with</span>
-          <span className="text-[#ff4d4d] font-bold">♥</span>
+          <span className="text-red-pen font-bold">♥</span>
           <span>by <strong>Siddhant Singh</strong> • Bangalore</span>
         </div>
 
@@ -32,14 +32,14 @@ const FooterSection = () => {
               href={s.href}
               target={s.href.startsWith('http') ? '_blank' : undefined}
               rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="bg-white border-2 border-[#2d2d2d] wobbly px-3 py-1 text-sm font-hand font-bold text-[#2d2d2d] hover:bg-[#ff4d4d] hover:text-white transition-colors sketch-shadow-sm"
+              className="bg-surface border-2 border-outline wobbly px-3 py-1 text-sm font-hand font-bold text-ink hover:bg-red-pen hover:text-on-red transition-colors sketch-shadow-sm"
             >
               {s.label}
             </a>
           ))}
           <button
             onClick={scrollToTop}
-            className="p-2 bg-white border-2 border-[#2d2d2d] wobbly hover:bg-[#fff9c4] transition-colors sketch-shadow-sm ml-1"
+            className="p-2 bg-surface border-2 border-outline wobbly hover:bg-postit transition-colors sketch-shadow-sm ml-1"
             aria-label="Back to Top"
           >
             <ArrowUp size={16} />

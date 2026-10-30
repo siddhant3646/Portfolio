@@ -2,46 +2,93 @@
 
 @import "tailwindcss";
 
+/* Class-based dark mode: the `dark` variant follows the .dark class on <html>
+   rather than the OS preference, so the manual toggle is authoritative. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: 'Patrick Hand', cursive, system-ui, sans-serif;
   --font-heading: 'Kalam', cursive, Georgia, serif;
   --font-body: 'Patrick Hand', cursive, system-ui, sans-serif;
+
+  /* Sketch palette. Utilities resolve these through var(), so html.dark below
+     re-skins the whole site without per-element dark: variants. */
+  --color-paper: #fdfbf7;
+  --color-surface: #ffffff;
+  --color-ink: #2d2d2d;
+  --color-secondary: #66615b;
+  --color-outline: #2d2d2d;
+  --color-shadow: #2d2d2d;
+  --color-grid: #e5e0d8;
+  --color-muted: #e5e0d8;
+  --color-postit: #fff9c4;
+  --color-red-pen: #b52f39;
+  --color-blue-pen: #2d5da1;
+
+  /* Text placed on top of each saturated fill, kept legible in both themes. */
+  --color-on-red: #ffffff;
+  --color-on-blue: #ffffff;
+  --color-on-postit: #2d2d2d;
+}
+
+html.dark {
+  --color-paper: #131820;
+  --color-surface: #1c2430;
+  --color-ink: #eee9df;
+  --color-secondary: #bec5d0;
+  --color-outline: #7d899b;
+  --color-shadow: #080c13;
+  --color-grid: #29313d;
+  --color-muted: #252e3b;
+  --color-postit: #2e3541;
+  --color-red-pen: #ff8e88;
+  --color-blue-pen: #98c3ff;
+
+  --color-on-red: #1a0709;
+  --color-on-blue: #0b1626;
+  --color-on-postit: #f2f4f7;
+
+  color-scheme: dark;
 }
 
 @layer base {
   :root {
-    --bg-paper: #fdfbf7;
-    --text-pencil: #2d2d2d;
-    --paper-muted: #e5e0d8;
-    --accent-red: #ff4d4d;
-    --accent-blue: #2d5da1;
-    --postit-yellow: #fff9c4;
-    --border-pencil: #2d2d2d;
+    color-scheme: light;
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: #fdfbf7;
+    background-color: var(--color-paper);
   }
-  
+
+  :where(a, button, input, textarea, select, summary):focus-visible {
+    outline: 2px solid var(--color-blue-pen);
+    outline-offset: 4px;
+  }
+
+  /* Surface fades leave each component's transform and hover transitions intact. */
+  :where(html, body, .paper-texture, .theme-panel) {
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
   body {
     font-family: 'Patrick Hand', cursive, sans-serif;
-    background-color: #fdfbf7;
-    color: #2d2d2d;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
     overflow-x: hidden;
   }
-  
+
   ::selection {
-    background: #fff9c4;
-    color: #2d2d2d;
+    background: var(--color-postit);
+    color: var(--color-on-postit);
   }
 }
 
 @layer components {
   /* Paper Dot Grid Background */
   .paper-texture {
-    background-color: #fdfbf7;
-    background-image: radial-gradient(#e5e0d8 1.5px, transparent 1.5px);
+    background-color: var(--color-paper);
+    background-image: radial-gradient(var(--color-grid) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
@@ -64,32 +111,37 @@
 
   /* Hard Offset Shadows */
   .sketch-shadow-sm {
-    box-shadow: 2px 2px 0px 0px #2d2d2d;
+    box-shadow: 2px 2px 0px 0px var(--color-shadow);
   }
 
   .sketch-shadow {
-    box-shadow: 4px 4px 0px 0px #2d2d2d;
+    box-shadow: 4px 4px 0px 0px var(--color-shadow);
   }
 
   .sketch-shadow-lg {
-    box-shadow: 6px 6px 0px 0px #2d2d2d;
+    box-shadow: 6px 6px 0px 0px var(--color-shadow);
   }
 
   .sketch-shadow-xl {
-    box-shadow: 8px 8px 0px 0px #2d2d2d;
+    box-shadow: 8px 8px 0px 0px var(--color-shadow);
+  }
+
+  /* Press-down shadow used by the sketch buttons on :hover */
+  .sketch-shadow-press {
+    box-shadow: 2px 2px 0px 0px var(--color-shadow);
   }
 
   /* Post-it Note */
   .postit-note {
-    background-color: #fff9c4;
-    box-shadow: 4px 4px 0px 0px #2d2d2d;
+    background-color: var(--color-postit);
+    box-shadow: 4px 4px 0px 0px var(--color-shadow);
   }
 
   /* Tape Strip */
   .tape-strip {
-    background: rgba(229, 224, 216, 0.7);
-    border: 1px dashed rgba(45, 45, 45, 0.2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    background: color-mix(in srgb, var(--color-muted) 70%, transparent);
+    border: 1px dashed color-mix(in srgb, var(--color-ink) 20%, transparent);
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 8%, transparent);
   }
 
   /* Thumbtack Pin */
@@ -97,9 +149,9 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #ff4d4d;
-    border: 2px solid #2d2d2d;
-    box-shadow: 1px 1px 0px #2d2d2d;
+    background: var(--color-red-pen);
+    border: 2px solid var(--color-outline);
+    box-shadow: 1px 1px 0px var(--color-shadow);
   }
 }
 
@@ -125,9 +177,14 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q 25 20, 50 10 T 100 10' stroke='%23ff4d4d' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q 25 20, 50 10 T 100 10' stroke='%23b52f39' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+  }
+
+  /* The squiggle is an inline SVG data URL, so its stroke can't read var(). */
+  html.dark .scribble-underline::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q 25 20, 50 10 T 100 10' stroke='%23ff8e88' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   }
 }
 
@@ -137,18 +194,27 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #fdfbf7;
+  background: var(--color-paper);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e5e0d8;
-  border: 2px solid #2d2d2d;
+  background: var(--color-muted);
+  border: 2px solid var(--color-outline);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff4d4d;
+  background: var(--color-red-pen);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-
+  :where(html, body, .paper-texture, .theme-panel),
+  .theme-panel *,
+  button[aria-controls^="appearance-"] {
+    transition: none;
+  }
+}

@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion as Motion, useInView } from 'framer-motion';
 import { Calendar, MapPin, Award, GraduationCap, Users, ShieldCheck, Cpu } from 'lucide-react';
 
 const ExperienceSection = () => {
@@ -13,7 +13,7 @@ const ExperienceSection = () => {
       location: 'Bangalore, India',
       duration: 'Jun 2026 - Present',
       type: 'Full-time',
-      bg: 'bg-white',
+      bg: 'bg-surface',
       rot: '-rotate-1',
       bullets: [
         'Collaborated with cross-functional Agile teams to design and ship 3 new crisis communication features and third-party system integrations, expanding response-plan automation capabilities.',
@@ -28,7 +28,7 @@ const ExperienceSection = () => {
       location: 'Noida, India',
       duration: 'Jun 2022 - May 2026',
       type: 'Full-time',
-      bg: 'bg-[#fff9c4]',
+      bg: 'bg-postit',
       rot: 'rotate-1',
       bullets: [
         'Architected and built an end-to-end Retrieval-Augmented Generation (RAG) system ingesting 5M+ documents across 5+ document types (PDF, DOCX, Excel, Visio/VSDX, Java) into a unified vector knowledge base using ChromaDB, LangChain, and LlamaIndex.',
@@ -49,14 +49,14 @@ const ExperienceSection = () => {
       org: 'Fiserv Competition (500+ Participants)',
       desc: 'Won first place among 500+ engineers, validating elite security-first software development and secure coding practices.',
       icon: Award,
-      bg: 'bg-white',
+      bg: 'bg-surface',
     },
     {
       title: 'Android Team Lead',
       org: 'Google Developer Student Club (GDSC)',
       desc: 'Led a 10-member Android engineering team, driving innovative mobile app development and conducting campus workshops.',
       icon: Users,
-      bg: 'bg-[#fff9c4]',
+      bg: 'bg-postit',
     },
   ];
 
@@ -65,10 +65,10 @@ const ExperienceSection = () => {
       <div ref={ref} className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="mb-12 text-center md:text-left">
-          <span className="font-hand text-sm uppercase tracking-widest text-[#ff4d4d] font-bold block mb-1">
+          <span className="font-hand text-sm uppercase tracking-widest text-red-pen font-bold block mb-1">
             💼 SECTION 04 — WORK EXPERIENCE
           </span>
-          <h2 className="font-heading font-bold text-3xl sm:text-5xl text-[#2d2d2d]">
+          <h2 className="font-heading font-bold text-3xl sm:text-5xl text-ink">
             Career Experience & Leadership.
           </h2>
         </div>
@@ -76,40 +76,40 @@ const ExperienceSection = () => {
         {/* Timeline Stack */}
         <div className="space-y-8 mb-12">
           {experiences.map((exp, index) => (
-            <motion.div
+            <Motion.div
               key={exp.company}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`${exp.bg} border-[3px] border-[#2d2d2d] wobbly-md p-6 sm:p-8 sketch-shadow-lg relative ${exp.rot} hover:rotate-0 transition-transform`}
+              className={`${exp.bg} border-[3px] border-outline wobbly-md p-6 sm:p-8 sketch-shadow-lg relative ${exp.rot} hover:rotate-0 transition-transform`}
             >
               {/* Tape strip */}
               <div className="absolute -top-3.5 left-8 w-24 h-6 tape-strip" />
 
               {/* Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b-2 border-dashed border-[#2d2d2d]/30">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b-2 border-dashed border-outline/40">
                 <div>
                   <div className="flex items-center gap-2.5 mb-1">
-                    <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#2d2d2d]">
+                    <h3 className="font-heading font-bold text-2xl sm:text-3xl text-ink">
                       {exp.role}
                     </h3>
-                    <span className="bg-[#e5e0d8] border border-[#2d2d2d] wobbly px-2 py-0.5 font-hand text-xs text-[#2d2d2d]">
+                    <span className="bg-muted border border-outline wobbly px-2 py-0.5 font-hand text-xs text-ink">
                       {exp.type}
                     </span>
                   </div>
-                  <div className="font-hand text-xl font-bold text-[#2d5da1]">
+                  <div className="font-hand text-xl font-bold text-blue-pen">
                     @ {exp.company}
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-3 font-hand text-base text-[#2d2d2d]/70">
+                <div className="flex flex-wrap items-center gap-3 font-hand text-base text-secondary">
                   <span className="flex items-center gap-1">
-                    <Calendar size={16} className="text-[#ff4d4d]" />
+                    <Calendar size={16} className="text-red-pen" />
                     {exp.duration}
                   </span>
                   <span>•</span>
                   <span className="flex items-center gap-1">
-                    <MapPin size={16} className="text-[#2d5da1]" />
+                    <MapPin size={16} className="text-blue-pen" />
                     {exp.location}
                   </span>
                 </div>
@@ -118,77 +118,77 @@ const ExperienceSection = () => {
               {/* Bullet Points */}
               <ul className="space-y-2.5 mb-6">
                 {exp.bullets.map((bullet, bIndex) => (
-                  <li key={bIndex} className="flex items-start gap-2.5 font-hand text-base sm:text-lg text-[#2d2d2d]/90 leading-relaxed">
-                    <span className="text-[#ff4d4d] font-bold mt-0.5">✓</span>
+                  <li key={bIndex} className="flex items-start gap-2.5 font-hand text-base sm:text-lg text-secondary leading-relaxed">
+                    <span className="text-red-pen font-bold mt-0.5">✓</span>
                     <span>{bullet}</span>
                   </li>
                 ))}
               </ul>
 
               {/* Tech Badges */}
-              <div className="flex flex-wrap gap-2 pt-4 border-t-2 border-dashed border-[#2d2d2d]/30">
+              <div className="flex flex-wrap gap-2 pt-4 border-t-2 border-dashed border-outline/40">
                 {exp.tech.map((t) => (
                   <span
                     key={t}
-                    className="bg-white border-2 border-[#2d2d2d] wobbly px-2.5 py-0.5 font-hand text-sm text-[#2d2d2d]"
+                    className="bg-surface border-2 border-outline wobbly px-2.5 py-0.5 font-hand text-sm text-ink"
                   >
                     {t}
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
 
         {/* Education & Leadership Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {/* Education Card */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-white border-[3px] border-[#2d2d2d] wobbly-md p-6 sketch-shadow-lg flex flex-col justify-between"
+            className="bg-surface border-[3px] border-outline wobbly-md p-6 sketch-shadow-lg flex flex-col justify-between"
           >
             <div>
-              <div className="w-10 h-10 bg-[#fff9c4] border-2 border-[#2d2d2d] wobbly-circle flex items-center justify-center text-[#ff4d4d] mb-3">
+              <div className="w-10 h-10 bg-postit border-2 border-outline wobbly-circle flex items-center justify-center text-red-pen mb-3">
                 <GraduationCap size={20} />
               </div>
-              <h4 className="font-heading font-bold text-lg text-[#2d2d2d]">
+              <h4 className="font-heading font-bold text-lg text-ink">
                 B.Tech in Computer Science
               </h4>
-              <p className="font-hand text-base text-[#2d2d2d]/70 mt-1">
+              <p className="font-hand text-base text-secondary mt-1">
                 Vellore Institute of Technology (VIT), Bhopal
               </p>
             </div>
-            <div className="font-hand text-sm text-[#2d5da1] font-bold mt-4 pt-2 border-t border-dashed border-[#2d2d2d]/30">
+            <div className="font-hand text-sm text-blue-pen font-bold mt-4 pt-2 border-t border-dashed border-outline/40">
               📅 Jun 2018 - May 2022
             </div>
-          </motion.div>
+          </Motion.div>
 
           {/* Leadership Cards */}
           {leadership.map((item, idx) => (
-            <motion.div
+            <Motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.35 + idx * 0.1 }}
-              className={`${item.bg} border-[3px] border-[#2d2d2d] wobbly-md p-6 sketch-shadow-lg flex flex-col justify-between`}
+              className={`${item.bg} border-[3px] border-outline wobbly-md p-6 sketch-shadow-lg flex flex-col justify-between`}
             >
               <div>
-                <div className="w-10 h-10 bg-white border-2 border-[#2d2d2d] wobbly-circle flex items-center justify-center text-[#2d5da1] mb-3">
+                <div className="w-10 h-10 bg-surface border-2 border-outline wobbly-circle flex items-center justify-center text-blue-pen mb-3">
                   <item.icon size={20} />
                 </div>
-                <h4 className="font-heading font-bold text-lg text-[#2d2d2d]">
+                <h4 className="font-heading font-bold text-lg text-ink">
                   {item.title}
                 </h4>
-                <div className="font-hand text-xs font-bold text-[#ff4d4d] mb-2">
+                <div className="font-hand text-xs font-bold text-red-pen mb-2">
                   {item.org}
                 </div>
-                <p className="font-hand text-sm text-[#2d2d2d]/80 leading-relaxed">
+                <p className="font-hand text-sm text-secondary leading-relaxed">
                   {item.desc}
                 </p>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
