@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#fdfbf7] text-[#2d2d2d] font-hand selection:bg-[#fff9c4] selection:text-[#2d2d2d] overflow-x-hidden paper-texture">
+    <div className="relative min-h-screen bg-paper text-ink font-hand selection:bg-postit selection:text-on-postit overflow-x-hidden paper-texture">
       {/* Hand-Drawn Floating Navigation */}
       <Navbar />
 

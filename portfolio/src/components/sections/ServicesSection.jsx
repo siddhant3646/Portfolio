@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion as Motion, useInView } from 'framer-motion';
 import { Server, Cpu, CheckCircle } from 'lucide-react';
 
 const ServicesSection = () => {
@@ -17,10 +17,9 @@ const ServicesSection = () => {
         'Spring Boot microservices reducing dispute time < 2s',
         'Robust REST & GraphQL APIs with comprehensive JUnit tests',
       ],
-      bg: 'bg-white',
+      bg: 'bg-surface',
       rot: '-rotate-1',
       tag: 'Java 21 • Kafka • Spring Boot',
-      color: '#2d5da1',
     },
     {
       title: 'GenAI, RAG & Edge Vision',
@@ -32,10 +31,9 @@ const ServicesSection = () => {
         'Quantized TensorFlow Lite deployment on Android devices',
         'Offline inference pipelines with zero cloud latency & data privacy',
       ],
-      bg: 'bg-[#fff9c4]',
+      bg: 'bg-postit',
       rot: 'rotate-1',
       tag: 'LangChain • LlamaIndex • YOLOv10 • TF Lite',
-      color: '#ff4d4d',
     },
   ];
 
@@ -44,10 +42,10 @@ const ServicesSection = () => {
       <div ref={ref} className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="mb-12 text-center md:text-left">
-          <span className="font-hand text-sm uppercase tracking-widest text-[#ff4d4d] font-bold block mb-1">
+          <span className="font-hand text-sm uppercase tracking-widest text-red-pen font-bold block mb-1">
             🛠️ SECTION 03 — WHAT I DO
           </span>
-          <h2 className="font-heading font-bold text-3xl sm:text-5xl text-[#2d2d2d]">
+          <h2 className="font-heading font-bold text-3xl sm:text-5xl text-ink">
             Core Engineering Disciplines.
           </h2>
         </div>
@@ -55,32 +53,32 @@ const ServicesSection = () => {
         {/* 2 Big Cards */}
         <div className="grid md:grid-cols-2 gap-8">
           {capabilities.map((cap, index) => (
-            <motion.div
+            <Motion.div
               key={cap.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`${cap.bg} border-[3px] border-[#2d2d2d] wobbly-md p-6 sm:p-8 sketch-shadow-lg relative ${cap.rot} hover:rotate-0 hover:-translate-y-1 transition-all flex flex-col justify-between`}
+              className={`${cap.bg} border-[3px] border-outline wobbly-md p-6 sm:p-8 sketch-shadow-lg relative ${cap.rot} hover:rotate-0 hover:-translate-y-1 transition-all flex flex-col justify-between`}
             >
               {/* Tape strip */}
               <div className="absolute -top-3.5 left-10 w-24 h-6 tape-strip" />
 
               <div>
-                <span className="font-hand text-xs font-bold uppercase tracking-widest text-[#2d2d2d]/50 block mb-1">
+                <span className="font-hand text-xs font-bold uppercase tracking-widest text-secondary block mb-1">
                   {cap.subtitle}
                 </span>
-                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#2d2d2d] mb-4">
+                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-ink mb-4">
                   {cap.title}
                 </h3>
-                <p className="font-hand text-base sm:text-lg text-[#2d2d2d]/85 leading-relaxed mb-6">
+                <p className="font-hand text-base sm:text-lg text-secondary leading-relaxed mb-6">
                   {cap.desc}
                 </p>
 
                 {/* Features list */}
                 <div className="space-y-2 mb-6">
                   {cap.features.map((f) => (
-                    <div key={f} className="flex items-start gap-2 font-hand text-base text-[#2d2d2d]">
-                      <span className="text-[#ff4d4d] font-bold">✓</span>
+                    <div key={f} className="flex items-start gap-2 font-hand text-base text-ink">
+                      <span className="text-red-pen font-bold">✓</span>
                       <span>{f}</span>
                     </div>
                   ))}
@@ -88,10 +86,10 @@ const ServicesSection = () => {
               </div>
 
               {/* Tag Footer */}
-              <div className="pt-4 border-t-2 border-dashed border-[#2d2d2d]/30 font-hand text-sm font-bold text-[#2d5da1]">
+              <div className="pt-4 border-t-2 border-dashed border-outline/40 font-hand text-sm font-bold text-blue-pen">
                 🏷️ {cap.tag}
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
